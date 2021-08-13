@@ -1,0 +1,708 @@
+{
+  "intents": [
+    {
+      "intent": "About_Us",
+      "examples": [
+        {
+          "text": "1"
+        },
+        {
+          "text": "1)"
+        },
+        {
+          "text": "1."
+        },
+        {
+          "text": "about"
+        },
+        {
+          "text": "about university"
+        },
+        {
+          "text": "about us"
+        },
+        {
+          "text": "about vaishnav trust"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Academics",
+      "examples": [
+        {
+          "text": "Academics"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Admission",
+      "examples": [
+        {
+          "text": "4"
+        },
+        {
+          "text": "4)"
+        },
+        {
+          "text": "4."
+        },
+        {
+          "text": "About admission"
+        },
+        {
+          "text": "Admission"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Contact_Us",
+      "examples": [
+        {
+          "text": "contact"
+        },
+        {
+          "text": "Contact us"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Enroll",
+      "examples": [
+        {
+          "text": "enroll"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Fee",
+      "examples": [
+        {
+          "text": "Fee"
+        },
+        {
+          "text": "fees"
+        },
+        {
+          "text": "fee structure"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "Good afternoon"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "Good morning"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hey"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "What's up"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Hostel",
+      "examples": [
+        {
+          "text": "about hostel"
+        },
+        {
+          "text": "hostel"
+        },
+        {
+          "text": "information about hostel"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Infrastructure",
+      "examples": [
+        {
+          "text": "3"
+        },
+        {
+          "text": "3)"
+        },
+        {
+          "text": "3."
+        },
+        {
+          "text": "About infrastructure"
+        },
+        {
+          "text": "Infrastructure"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Placements",
+      "examples": [
+        {
+          "text": "Placements"
+        }
+      ]
+    },
+    {
+      "intent": "ThankYou",
+      "examples": [
+        {
+          "text": "Bye"
+        },
+        {
+          "text": "Thanks"
+        },
+        {
+          "text": "Thanks a lot"
+        },
+        {
+          "text": "Thank You"
+        },
+        {
+          "text": "Thnx"
+        },
+        {
+          "text": "Ty"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Transport",
+      "examples": [
+        {
+          "text": "about transport"
+        },
+        {
+          "text": "about transport facility"
+        },
+        {
+          "text": "transport facility"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Why_SVVV",
+      "examples": [
+        {
+          "text": "2"
+        },
+        {
+          "text": "2)"
+        },
+        {
+          "text": "2."
+        },
+        {
+          "text": "About SVVV"
+        },
+        {
+          "text": "SVVV"
+        },
+        {
+          "text": "Why SVVV"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_10_1595588395995",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Thank_You",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Glad to help!"
+              },
+              {
+                "text": "It was the least I can do!"
+              },
+              {
+                "text": "Anytime..!"
+              },
+              {
+                "text": "I am happy to help!"
+              },
+              {
+                "text": "Mention Not"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "random"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "To know more details you can visit our site by clicking\nhttp://www.svvv.edu.in/\n\nOR\nYou can visit our college \nhttps://goo.gl/maps/szPMZLKstHCYGTbb7"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#ThankYou",
+      "dialog_node": "node_10_1595588395995",
+      "previous_sibling": "node_8_1596108267232"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "output": {
+        "generic": [
+          {
+            "title": "How can I help you? Want to know about our university??  Type  any one option - ",
+            "options": [
+              {
+                "label": "1) About us",
+                "value": {
+                  "input": {
+                    "text": "About_Us"
+                  }
+                }
+              },
+              {
+                "label": "2) Why SVVV",
+                "value": {
+                  "input": {
+                    "text": "Why_SVVV"
+                  }
+                }
+              },
+              {
+                "label": "3) Infrastructure",
+                "value": {
+                  "input": {
+                    "text": "Infrastructure"
+                  }
+                }
+              },
+              {
+                "label": "4) Admission",
+                "value": {
+                  "input": {
+                    "text": "Admission"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#Greetings",
+      "dialog_node": "node_1_1595419724460",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "About_Us",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "1884 is the landmark year as the foundation stone was laid 136 years ago for Shri Vaishnav Group of Institutions. Shri Vaishnav Vidyapeeth Trust is continuously working in the sphere of education, health and environment. It has been established to promote education and research in various disciplines through academic institutions for the benefits of all sections of the society."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "For more information",
+            "options": [
+              {
+                "label": "Contact Us",
+                "value": {
+                  "input": {
+                    "text": "Contact_Us"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#About_Us",
+      "dialog_node": "node_2_1595420404887",
+      "previous_sibling": "node_1_1595419724460"
+    },
+    {
+      "type": "standard",
+      "title": "Why SVVV",
+      "output": {
+        "generic": [
+          {
+            "title": "Type any one to proceed",
+            "options": [
+              {
+                "label": "1) Academics",
+                "value": {
+                  "input": {
+                    "text": "Academics"
+                  }
+                }
+              },
+              {
+                "label": "2) Placements",
+                "value": {
+                  "input": {
+                    "text": "Placements"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#Why_SVVV",
+      "dialog_node": "node_3_1595420741060",
+      "previous_sibling": "node_2_1595420404887"
+    },
+    {
+      "type": "standard",
+      "title": "Academics",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Academics\nSome of the Salient Features are:\n1. Highly experienced full-time/visiting faculty for all courses drawn from leading Management and Engineering Institutions from across the country and abroad.\n2. A unique one-on-one student-mentoring program for all-round personality development.\n3. Strong Industry Linkages - To impart rich hands-on experience with leading Corporates and Consultancies."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Academics",
+      "dialog_node": "node_6_1595421122322",
+      "previous_sibling": "node_3_1595420741060"
+    },
+    {
+      "type": "standard",
+      "title": "Hostel",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "In order to support out-station students, Shri Vaishnav Shekshanik and Parmarthik Trust has built separate hostels for boys and girls in the central part of Indore. Admissions in these hostels are on \"first come first serve basis\". In addition to the above, there is a private boys' hostel located opposite to the institute."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Hostel",
+      "dialog_node": "node_6_1595587661570",
+      "previous_sibling": "node_7_1595587554924"
+    },
+    {
+      "type": "standard",
+      "title": "Placements",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "To know about placements in SVVV click the below link \nhttp://www.svvv.edu.in/uploaded_files/Batch_2020_CSE_&__IT.pdf"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Placements",
+      "dialog_node": "node_7_1595421496274",
+      "previous_sibling": "node_6_1595421122322"
+    },
+    {
+      "type": "standard",
+      "title": "Admission",
+      "output": {
+        "generic": [
+          {
+            "source": "http://www.svvv.edu.in/uploaded_files/SVVV_Poster_15_May_2020.jpg",
+            "response_type": "image"
+          },
+          {
+            "title": "Know more about admission - ",
+            "options": [
+              {
+                "label": "How to enroll",
+                "value": {
+                  "input": {
+                    "text": "Enroll"
+                  }
+                }
+              },
+              {
+                "label": "Fee Structure",
+                "value": {
+                  "input": {
+                    "text": "Fee"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#Admission",
+      "dialog_node": "node_7_1595421873623",
+      "previous_sibling": "node_7_1595421496274"
+    },
+    {
+      "type": "standard",
+      "title": "Enroll",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "To enroll in Svvv click this link below -\nhttps://svvvadmission.mastersofterp.in/"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Enroll",
+      "dialog_node": "node_7_1595422180274",
+      "previous_sibling": "node_7_1595421873623"
+    },
+    {
+      "type": "standard",
+      "title": "Infrastructure",
+      "output": {
+        "generic": [
+          {
+            "title": "Type one",
+            "options": [
+              {
+                "label": "Hostel",
+                "value": {
+                  "input": {
+                    "text": "Hostel"
+                  }
+                }
+              },
+              {
+                "label": "Transport",
+                "value": {
+                  "input": {
+                    "text": "Transport"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#Infrastructure",
+      "dialog_node": "node_7_1595587554924",
+      "previous_sibling": "node_8_1595422230940"
+    },
+    {
+      "type": "standard",
+      "title": "Fee",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "To see SVVV fee structure for various branches click this link -\nhttp://www.svvv.edu.in/uploaded_files/Fee_Structure_2020-21_18.07.2020.pdf"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Fee",
+      "dialog_node": "node_8_1595422230940",
+      "previous_sibling": "node_7_1595422180274"
+    },
+    {
+      "type": "standard",
+      "title": "Contact_Us",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Shri Vaishnav Vidyapeeth Vishwavidyalaya\nCampus : Indore – Ujjain Road, Indore – 453111\nCity Office : Shri Vaishnav Vidya Parisar, 177 Jawahar Marg, Indore(M.P.)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Contact_Us",
+      "dialog_node": "node_8_1596108267232",
+      "previous_sibling": "node_9_1595588080571"
+    },
+    {
+      "type": "standard",
+      "title": "Transport",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Our Institute has adequate and comfortable transport facility. Almost each and every route of Indore is covered by college buses. The details of transportation facility are given below:\n\nNumber of Buses :\t32\nNumber of Drivers and Conductors :\t45\nName of the Transport Officer :\tMr.Mahesh Meena\n\nThe college buses starts at 07:15 A.M and 09:15 A.M from then first stop that is why all the buses cover all the routes twice a day."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Transport",
+      "dialog_node": "node_9_1595588080571",
+      "previous_sibling": "node_6_1595587661570"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello there..! Welcome to SVVV University. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "SVVV",
+  "language": "en",
+  "description": ""
+}
